@@ -1,15 +1,40 @@
+//Background colors
+$bgc-light: #e7e2dc;
+$bgc-dark: #1d1d1d;
+$bgc-warm: #ebb400;
+
+//Font colors
+$fc-light: white;
+$fc-dark: #1d1d1d;
+
+//Border-radius
+$br-normal: 10px;
+
+//Break Points
+$break-small: 640px;
+
+
+//Global styles
 *{
     position:relative;
     padding: 0;
     margin: 0 auto;
-    background-color: #272727;
-    color: white;
     font-family: 'Roboto',sans-serif;
+    box-sizing: border-box;
 }
+h1 {
+    margin: 20px auto;
+}
+p {
+    margin: 10px auto;
+    line-height: 25px;
+}
+
+
 
 #canvas {
     z-index: 0;
-    width: 100vw;
+    max-width: 100%;
     height: 100vh;
 }
 
@@ -18,4 +43,236 @@
     z-index: 10;
     top: 50vh;
     left: 50vh;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../images/bg_wood.jpeg");
+    background-size: contain;
+    background-attachment: fixed;
+    
+    @media screen and (max-width: $break-small) {
+        background-image: none;
+    }
+}
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 0;
+    text-align: center;
+    background-color: black;
+    // background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(2, 2, 2));
+    z-index: 10;
+    a {
+        margin: auto 10px;
+        line-height: 60px;
+        text-decoration: none;
+        color: $fc-light;
+    }
+    #linkedin {
+        top: -60px;
+    }
+    #github {
+        top: -60px;
+    }
+    #twitter {
+        top: -60px;
+    }
+    #nav-logo-text {
+        position: fixed;
+        top: -120px;
+        left: 50px;
+        padding: 30px 30px;
+        background-color: #333;
+        color: $fc-light;
+        line-height: 60px;
+        font-size: 30px;
+        span {
+            padding: 20px;
+            border: 2px solid $fc-light;
+            border-radius: 100%;
+        }
+    }
+}
+.nav-icon {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+}
+.cover {
+    width: 100%;
+    height: 100vh;
+}
+.container {
+    margin: 0 auto;
+    width: 1080px;
+    @media screen and (max-width: $break-small) {
+        width: 100%;
+    }
+}
+.section-header {
+    width: 100%;
+    padding: 20px 40px;
+    background-color: $bgc-warm;
+    color: $bgc-dark;
+}
+.section-light {
+    padding: 20px;
+    width: 100%;
+    min-height: 600px;
+    background-color: $bgc-light;
+    color: $fc-dark;
+}
+.section-dark {
+    padding: 20px;
+    width: 100%;
+    min-height: 600px;
+    background-color: $bgc-dark;
+    color: $fc-light;
+}
+.section-warm {
+    padding: 20px;
+    width: 100%;
+    min-height: 600px;
+    background-color: $bgc-warm;
+    color: $fc-dark;
+}
+.section-web-project {
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    min-height: 600px;
+    background-color: white;
+    
+}
+
+//Hover letters
+.jiggle-container {
+    position: absolute;
+    top: 30vh;
+    left: 40vw;
+}
+.hover-letter {
+    cursor: zoom-in;
+    margin: 20px auto;
+    color: white;
+    font-size: 100px;
+    font-weight: 800;
+}
+
+//Projects
+.project-container {
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+    width: 100%;
+    @media screen and (max-width: $break-small) {
+        display: block;
+        width: 100%;
+    }
+}
+.project-card {
+    margin: 10px auto;
+    width: 300px;
+    height: 400px;
+    transition: margin-top 0.25s;
+    margin-top: 10px;
+    background-color: $bgc-light;
+    color: $fc-dark;
+    border-radius: $br-normal;
+    box-shadow: 0px 0px 10px black;
+    h2 {
+        padding: 10px 20px;
+        background-color: $bgc-warm;
+        color: $fc-dark;
+        border-top-left-radius: $br-normal;
+        border-top-right-radius: $br-normal;
+    }
+    img {
+        width: 100%;
+    }
+    p {
+        padding: 10px;
+    }
+    @media screen and (max-width: $break-small) {
+        display: block;
+        width: 100%;
+    }
+}
+.project-card:hover {
+    transition: margin-top 0.25s;
+    margin-top: 6px;
+    box-shadow: 0 4px 16px black;
+}
+#games {
+    .project-card h2 {
+        background-color: $bgc-dark;
+        color: $fc-light;
+    }
+}
+
+//slideshow 
+.slides-container {
+    width: 100%;
+    height: 600px;
+    background-color: white;
+    overflow-x: hidden;
+    white-space: nowrap;
+    ul {
+        list-style: none;
+        font-size: 0;
+    }
+    ul li {
+        display: inline-block;
+        margin: 0;
+        width: 100%;
+        height: 600px;
+        color: $bgc-dark;
+        img {
+            width:100%;
+            height:100%;
+        }
+    }
+    .slides-nav-left {
+        cursor: pointer;
+        position: absolute;
+        z-index: 10;
+        width: 50px;
+        height: 50px;
+        top: 275px;
+        left: 10px;
+        background-color: red;
+        opacity: 0;
+    }
+    .slides-nav-right {
+        cursor: pointer;
+        position: absolute;
+        z-index: 10;
+        width: 50px;
+        height: 50px;
+        top: 275px;
+        left: calc(100% - 60px);
+        background-color: red;
+        opacity: 0;
+    }
+}
+
+.portfolio-container {
+    width: 100%;
+    height: 100vh;
+    background-color: $bgc-dark;
+}
+.portfolio-section {
+    display: inline-block;
+    padding: 10px;
+    width: 50%;
+    height: 100%;
+    background-color: $bgc-warm;
+    color: $bgc-dark;
+    font-size: 0;
+    p {
+        font-size: 16px;
+    }
 }
