@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:500|Roboto" rel="stylesheet">
     <script src="./js/anime.min.js"></script>
     <script src="./js/jquery.min.js"></script>
     <link rel="stylesheet" href="./styles/style2.css">
@@ -12,39 +12,30 @@
 </head>
 <body>
     <div class="social-links">
-            <a href="#" id="linkedin">
-                <img src="./images/linkedin-2.svg" alt="" class="nav-icon">
+            <a href="https://www.linkedin.com/in/patrick-hill-57050741/" >
+                <img src="./images/socialIcons/linkedin.svg" alt="" class="nav-icon" id="linkedin">
             </a>
-            <a href="#" id="github">
-                <img src="./images/GitHub-Mark-Light-64px.png" alt="" class="nav-icon">
+            <a href="https://github.com/patrickshill">
+                <img src="./images/socialIcons/github.svg" alt="" class="nav-icon" id="github">
             </a>
-            <a href="#" id="twitter">
-                <img src="./images/Twitter_Social_Icon_Rounded_Square_Color.svg" alt="" class="nav-icon">
+            <a href="https://twitter.com/CilethDev">
+                <img src="./images/socialIcons/twitter.svg" alt="" class="nav-icon" id="twitter">
             </a>
     </div>
     <div class="cover" id="splash">
+        <img src="./images/parallax/moon-01.svg" alt="" class="parallax" id="parallax-1">
+        <img src="./images/parallax/Mountains.svg" alt="" class="parallax" id="parallax-2">
+        <img src="./images/parallax/MountainMain-01.svg" alt="" class="parallax" id="parallax-3">
+        <img src="./images/parallax/TreesRocks-01.svg" alt="" class="parallax" id="parallax-4">
+        <img src="./images/parallax/TreesRocks-02.svg" alt="" class="parallax" id="parallax-5">
+        <img src="./images/parallax/TreesRocks-03.svg" alt="" class="parallax-foreground" id="parallax-foreground">
         <h1><span class="hover-letter">H</span><span class="hover-letter">e</span><span class="hover-letter">l</span><span class="hover-letter">l</span><span class="hover-letter">o</span><span class="hover-letter">,</span><br><span class="hover-letter">I</span><span class="hover-letter">'</span><span class="hover-letter">m </span><span class="hover-letter">P</span><span class="hover-letter">a</span><span class="hover-letter">t</span><span class="hover-letter">r</span><span class="hover-letter">i</span><span class="hover-letter">c</span><span class="hover-letter">k</span><span class="hover-letter">!</span></h1>
         <h2 id="tag"><span class="hover-word">a</span> <span class="hover-word">full</span> <span class="hover-word">stack</span class="hover-word"> <span class="hover-word">web</span class="hover-word"> <span class="hover-word">developer,</span class="hover-word"> <span class="hover-word">game</span> <span class="hover-word">designer,</span> <span class="hover-word">and</span class="hover-word"> <span class="hover-word">audio</span class="hover-word"> <span class="hover-word">engineer</span class="hover-word"></h2>
         <h3 id="check-me-out">Learn more</h3>
     </div>
     <div class="container" id="about">
-        <!-- <div class="attribute-container">
-            <div class="attribute-card">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit amet harum ad cupiditate voluptatem doloremque optio debitis nulla, ipsa minus repudiandae hic ab perspiciatis, repellat saepe assumenda officiis soluta! Voluptatem.</p>
-            </div>
-            <div class="attribute-card">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit amet harum ad cupiditate voluptatem doloremque optio debitis nulla, ipsa minus repudiandae hic ab perspiciatis, repellat saepe assumenda officiis soluta! Voluptatem.</p>
-            </div>
-            <div class="attribute-card">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit amet harum ad cupiditate voluptatem doloremque optio debitis nulla, ipsa minus repudiandae hic ab perspiciatis, repellat saepe assumenda officiis soluta! Voluptatem.</p>
-            </div>
-        </div> -->
         <div class="row">
-            <div class="split">
-                <h1>About Me</h1>
-                <p>Hi, I'm Patrick Hill! I'm a full stack web developer with a passion for creating engaging and interactive user experiences. I love building applications from the ground up, designing backend systems, models, and architecture to drive reactive front end components. With a background in game development and audio engineering, creative problem solving has been my primary focus. I'm excited to learn, grow, and utilizing my experience in future endeavours.</p>
-            </div>
-            <div class="split"></div>
+                <div class="split" id="about"><img src="/images/portrait.png" alt="" id="portrait"></div><div class="split"><h1>About Me</h1><p id="about-text">Hi, I'm Patrick Hill! I'm a full stack web developer in the Seattle area with a passion for creating engaging and interactive user experiences. I love building applications from the ground up, designing backend systems, models, and architecture to drive reactive front end components. With a background in game development and audio engineering, creative problem solving has been my primary focus. I'm excited to learn, grow, and utilizing my experience in future endeavours.</p></div>
         </div>
         
     </div>
@@ -53,6 +44,45 @@
         <div class="container">
             <h1>Web Projects</h1>
         </div>
+    </div>
+
+    <!-- Shaker -->
+    <div class="row">
+        <div class="project-header">
+            <h1 class="project-title">SHAKER</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cover" id="scrumptious-hero">
+            <img src="./images/shakerHero.jpg" alt="" id="shaker-hero">
+        </div>
+    </div>
+    <div class="row">
+        <div class="project-details"><div class="contain"><h1>Project Details</h1></div></div>
+    </div>
+    <div class="flex-container">
+        <div class="flex-split">
+            <h2>Use shaker to find cocktail recipes</h2>
+            <p>// Search through classic recipes and find new favorites</p>
+            <p>// Search by selecting multiple ingredients to find out what you can make</p>
+            <p>// Create an ingredient cabinet and get suggestions based on your inventory (WIP)</p>
+            <p>// Use ingredients to build recipes to share with other users (WIP)</p>
+            <p>// Find top rated user recipes (WIP)</p>
+        </div>
+        <div class="flex-split">
+            <div class="flex-tech-container" id="python-tech">
+                <div class="flex-tech-icon"><img src="./images/techIcons/c.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/Net.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/mysql.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/ajax.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/jquery.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/html.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/sass.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/animejs.svg" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
     </div>
 
     <!-- Scrumptious -->
@@ -66,31 +96,95 @@
             <img src="./images/scrumptiousHero.jpg" alt="" id="scrumptious-hero">
         </div>
     </div>
-    <div class="container">
-        <div class="split"><h2>Scrumptious is a task management application based on the SCRUM framework</h2></div><div class="split tech-icon-container">
-            <div class="tech-icon"></div>
-            <div class="tech-icon"></div>
-            <div class="tech-icon"></div>
-            <div class="tech-icon"></div>
-            <div class="tech-icon"></div>
-            <div class="tech-icon"></div>
-            <div class="tech-icon"></div>
-            <div class="tech-icon"></div>
+    <div class="row">
+        <div class="project-details"><div class="contain"><h1>Project Details</h1></div></div>
+    </div>
+    <div class="flex-container">
+        <div class="flex-split">
+            <h2>Scrumptious is a task management application based on the SCRUM framework</h2>
+            <p>// Create SCRUM boards for projects and collaborations</p>
+            <p>// Add list categories to boards</p>
+            <p>// Populate lists with tasks</p>
+            <p>// Drag and drop tasks between lists</p>
+            <p>// Collaborate with teams and track project progress</p>
         </div>
+        <div class="flex-split">
+            <div class="flex-tech-container" id="python-tech">
+                <div class="flex-tech-icon"><img src="./images/techIcons/python.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/django.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/mysql.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/ajax.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/html.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/less.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/animejs.svg" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    </div>
+
+    <!-- Chappy -->
+    <div class="row">
+        <div class="project-header">
+            <h1 class="project-title">CHAPPY</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cover" id="scrumptious-hero">
+            <img src="./images/chappyHero.jpg" alt="" id="chappy-hero">
+        </div>
+    </div>
+    <div class="row">
+        <div class="project-details"><div class="contain"><h1>Project Details</h1></div></div>
+    </div>
+    <div class="flex-container">
+        <div class="flex-split">
+            <h2>Chappy is a real-time chat and communication application</h2>
+            <p>// Create chat servers with sub-channels</p>
+            <p>// Register user accounts</p>
+            <p>// Invite friends to chat on servers</p>
+            <p>// Add friends and have private conversations</p>
+            
+        </div>
+        <div class="flex-split">
+            <div class="flex-tech-container" id="python-tech">
+                <div class="flex-tech-icon"><img src="./images/techIcons/JS.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/Mean.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/Angular.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/socket.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/html.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/sass.svg" alt=""></div>
+                <div class="flex-tech-icon"><img src="./images/techIcons/animejs.svg" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
     </div>
 
 
     <!-- Footer -->
     <div class="row">
-        <div class="footer">
+        <div class="footer" id="footer">
             <div class="container">
                 <div class="split">
                     <h1>Get in touch</h1>
+                    <form action="https://formspree.io/patrick.hill8991@gmail.com" method="post" id="contact-form">
+                        <p>Email:</p>
+                        <input type="text" name="email" id="contact-email" autocomplete="off"><br>
+                        <p>Message:</p>
+                        <textarea name="message" id="contact-message"></textarea><br>
+                        <input type="submit" value="SEND">
+                    </form>
                 </div>
                 <div class="split">
                     <h1>Get social</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima necessitatibus perspiciatis illum sed asperiores deserunt labore iure vero expedita et? Atque, expedita. Nisi praesentium iure quam reprehenderit id, officia dicta?</p>
+                    <ul>
+                        <li><a href="" id="footer-linkedin">LinkedIn</a></li>
+                        <li><a href="" id="footer-github">GitHub</a></li>
+                        <li><a href="" id="footer-twitter">Twitter</a></li>
+                    </ul>
                 </div>
+                <p id="copywrite">&copy Patrick Hill 2018. All rights reserved.</p>
             </div>
         </div>
     </div>
@@ -100,8 +194,27 @@
         let w = window.innerWidth;
         let h = window.innerHeight;
         let workPos = (w/2) - (document.getElementById('check-me-out').offsetWidth)/2;
-        $("#check-me-out").css("left",`${workPos}px`)
+        $("#check-me-out").css("left",`${workPos}px`);
+        let fa = (w > 640)? (w/100)*7 : (w/100)*12;
+        anime.remove(".hover-letter");
+        anime({
+            targets: ".hover-letter",
+            fontSize: fa,
+            duration: 1000
+        });
+
+        
+        fa = (w > 640)? (w/100)*4 : (w/100)*5;
+        anime.remove(".hover-word");
+        anime({
+            targets: ".hover-word",
+            fontSize: fa,
+            duration: 1000
+        });
         $(document).ready(function(){
+            
+            let workPos = (w/2) - (document.getElementById('check-me-out').offsetWidth)/2;
+            $("#check-me-out").css("left",`${workPos}px`);
 
             $(window).resize(function(){
                 w = window.innerWidth;
@@ -216,7 +329,173 @@
                     easing: "easeInOutCubic"
                 });
             })
+
             
+
+
+            //Footer in view
+            var toggleSocial = false;
+            var toggleAnimation = anime.timeline({
+                autoplay: false
+            });
+            toggleAnimation
+                .add({
+                    targets: "#linkedin",
+                    translateX: 100,
+                    duration: 1000
+                })
+                .add({
+                    targets: "#github",
+                    translateX: 100,
+                    duration: 1000,
+                    offset: '-=900'
+                })
+                .add({
+                    targets: "#twitter",
+                    translateX: 100,
+                    duration: 1000,
+                    offset: '-=900'
+                })
+                .add({
+                    targets: ".social-links",
+                    translateX: 100,
+                    duration: 1000,
+                    offset: '-=900'
+                })
+                .add({
+                    targets: "#footer-linkedin",
+                    fontSize: 20,
+                    opacity: 1,
+                    duration: 1000,
+                    offset: '-=900'
+                })
+                .add({
+                    targets: "#footer-github",
+                    fontSize: 20,
+                    opacity: 1,
+                    duration: 1000,
+                    offset: '-=900'
+                })
+                .add({
+                    targets: "#footer-twitter",
+                    fontSize: 20,
+                    opacity: 1,
+                    duration: 1000,
+                    offset: '-=900'
+                })
+            
+                //Parallax scrolling
+            var layers = document.querySelectorAll(".parallax");
+            var layerScrollModifier = [
+                0.0005,
+                0.4,
+                0.3,
+                0.4,
+                0.6,
+                0.8,
+            ];
+            
+            function animateParallax() {
+                var top = $(window).scrollTop();
+                console.log(top);
+                anime.remove(layers[0]);
+                anime({
+                    targets: layers[0],
+                    translateY: -top * layerScrollModifier[0],
+                    duration: 100,
+                    easing: "linear"
+                })
+                anime.remove(layers[1]);
+                anime({
+                    targets: layers[1],
+                    translateY: -top * layerScrollModifier[1],
+                    duration: 100,
+                    easing: "linear"
+                })
+                anime.remove(layers[2]);
+                anime({
+                    targets: layers[2],
+                    translateY: -top * layerScrollModifier[2],
+                    duration: 100,
+                    easing: "linear"
+                })
+                anime.remove(layers[3]);
+                anime({
+                    targets: layers[3],
+                    translateY: -top * layerScrollModifier[3],
+                    duration: 100,
+                    easing: "linear"
+                })
+                anime.remove(layers[4]);
+                anime({
+                    targets: layers[4],
+                    translateY: -top * layerScrollModifier[4],
+                    duration: 100,
+                    easing: "linear"
+                })
+                anime.remove(".parallax-foreground");
+                anime({
+                    targets: ".parallax-foreground",
+                    translateY: -top * layerScrollModifier[5],
+                    duration: 100,
+                    easing: "linear"
+                })
+            }
+
+            $(document).scroll(function(){
+                var fTop = $("#footer").offset();
+                var wTop = $(window).scrollTop();
+                let viewH = window.innerHeight;
+                
+                if(wTop < viewH) {
+                    animateParallax();
+                }
+                
+                if(!toggleSocial && (wTop + (viewH*0.75)) > fTop.top) {
+                    toggleSocial = !toggleSocial;
+
+                    //Animate social nav out and footer links in
+                    toggleAnimation.reset();
+                    toggleAnimation.play();
+                } else {
+                    if(toggleSocial && (wTop + (viewH*0.8)) < fTop.top) {
+                        toggleSocial = !toggleSocial;
+                        anime({
+                            targets: ["#footer-linkedin","#footer-github","#footer-twitter"],
+                            opacity: 0,
+                            fontSize: 0,
+                            duration: 500
+                        })
+                        anime({
+                            targets: ".social-links",
+                            translateX: 0,
+                            duration: 500,
+                            easing: "easeInExpo"
+                        });
+                        anime({
+                            targets: "#linkedin",
+                            delay: 500,
+                            translateX: 0,
+                            duration: 500,
+                            elasticity: 200
+                        });
+                        anime({
+                            targets: "#github",
+                            delay: 600,
+                            translateX: 0,
+                            duration: 500,
+                            elasticity: 200
+                        });
+                        anime({
+                            targets: "#twitter",
+                            delay: 700,
+                            translateX: 0,
+                            duration: 500,
+                            elasticity: 200
+                        });
+                    }
+                }
+            });
         });
 
         

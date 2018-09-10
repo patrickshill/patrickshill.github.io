@@ -7,6 +7,10 @@
   font-family: 'Roboto',sans-serif;
 }
 
+html {
+  width: 100%;
+}
+
 .cover {
   width: 100%;
   text-align: center;
@@ -36,7 +40,7 @@
 
 .social-links {
   position: fixed;
-  padding: 20px;
+  padding: 15px;
   z-index: 10;
   width: 80px;
   left: calc(100% - 80px);
@@ -48,6 +52,12 @@
   clip-path: polygon(29% 3%, 100% 0, 100% 100%, 52% 100%, 30% 96%, 9% 74%, 2% 17%);
 }
 
+@media screen and (max-width: 1080px) {
+  .social-links {
+    display: none;
+  }
+}
+
 .nav-icon {
   display: block;
   margin: 15px;
@@ -57,11 +67,22 @@
 }
 
 #splash {
-  background-color: #000000;
+  background-color: #0f0d16;
   padding: 15vh 15vw;
   height: 100vh;
   -webkit-clip-path: polygon(100% 0, 100% 84%, 85% 96%, 54% 95%, 50% 98%, 45% 94%, 7% 91%, 0 100%, 0 0);
   clip-path: polygon(100% 0, 100% 84%, 85% 96%, 54% 95%, 50% 98%, 45% 94%, 7% 91%, 0 100%, 0 0);
+}
+
+@media screen and (max-width: 640px) {
+  #splash {
+    -webkit-clip-path: polygon(100% 0, 100% 85%, 95% 90%, 50% 95%, 10% 90%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 85%, 95% 90%, 50% 95%, 10% 90%, 0 100%, 0 0);
+    background-image: url("../images/parallax/mobileSplash.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 #splash h1 {
@@ -96,6 +117,33 @@
   }
 }
 
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .parallax {
+    display: none;
+  }
+}
+
+.parallax-foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 640px) {
+  .parallax-foreground {
+    display: none;
+  }
+}
+
 .hover-letter {
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
@@ -105,11 +153,30 @@
   display: inline;
 }
 
+#about {
+  text-align: center;
+}
+
+#portrait {
+  width: 100%;
+  margin-top: -60px;
+}
+
+@media screen and (max-width: 640px) {
+  #portrait {
+    margin-top: 0;
+    margin-left: 1rem;
+    height: auto;
+    width: 100%;
+  }
+}
+
 .split {
   display: inline-block;
   padding: 20px;
   width: 50%;
   vertical-align: top;
+  text-align: left;
   font-size: 0;
 }
 
@@ -162,20 +229,160 @@
   color: #222;
 }
 
+#shaker-hero {
+  width: 100%;
+  font-size: 0;
+}
+
 #scrumptious-hero {
+  width: 100%;
+  font-size: 0;
+}
+
+#chappy-hero {
   width: 100%;
   font-size: 0;
 }
 
 .project-header {
   padding: 10px;
+  font-family: 'Oswald',sans-serif;
   background-color: black;
+  white-space: nowrap;
 }
 
 .project-title {
   margin-left: 11%;
   color: white;
-  font-size: 80px;
+  font-size: 5rem;
+}
+
+@media screen and (max-width: 1080px) {
+  .project-title {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .project-title {
+    font-size: 2rem;
+  }
+}
+
+.project-details {
+  height: 80px;
+  background-color: black;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 66% 80%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 100%, 66% 80%, 0 100%, 0 0);
+}
+
+.contain {
+  padding-left: 20px;
+  width: 1080px;
+}
+
+.contain h1 {
+  font-size: 2rem;
+  line-height: 80px;
+  color: white;
+}
+
+@media screen and (max-width: 1080px) {
+  .contain {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .contain {
+    display: block;
+    width: 100%;
+  }
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1080px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+@media screen and (max-width: 1080px) {
+  .flex-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .flex-container {
+    display: block;
+    width: 100%;
+  }
+}
+
+.flex-split {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px;
+}
+
+.flex-split p {
+  margin: 0.75rem auto;
+  line-height: 1.25rem;
+}
+
+.flex-tech-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+.flex-tech-icon {
+  display: inline-block;
+  margin: 10px;
+  font-size: 0;
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border-radius: 6px;
+}
+
+.flex-tech-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 1080px) {
+  .flex-tech-icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .flex-tech-icon {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .footer {
@@ -188,5 +395,64 @@
   font-size: 0;
   -webkit-clip-path: polygon(60% 0, 95% 5%, 100% 20%, 100% 100%, 0 100%, 0 0, 15% 9%);
   clip-path: polygon(60% 0, 95% 5%, 100% 20%, 100% 100%, 0 100%, 0 0, 15% 9%);
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin: 10px auto;
+  padding: 10px 2px;
+}
+
+.footer a {
+  opacity: 0;
+  font-size: 0;
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffc400;
+}
+
+#copywrite {
+  margin-left: 20px;
+  font-size: 1rem;
+  color: #444;
+}
+
+#contact-form p {
+  margin: 5px auto;
+}
+
+#contact-form input[type=text] {
+  padding: 10px;
+  width: 80%;
+  -webkit-clip-path: polygon(100% 0, 100% 90%, 85% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 90%, 85% 100%, 0 100%, 0 0);
+}
+
+#contact-form textarea {
+  padding: 10px;
+  width: 80%;
+  height: 120px;
+  -webkit-clip-path: polygon(100% 0, 100% 90%, 85% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 90%, 85% 100%, 0 100%, 0 0);
+}
+
+#contact-form input[type=submit] {
+  cursor: pointer;
+  margin: 15px auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffc400;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  -webkit-clip-path: polygon(95% 3%, 100% 64%, 90% 100%, 2% 91%, 0 19%, 7% 0);
+  clip-path: polygon(95% 3%, 100% 64%, 90% 100%, 2% 91%, 0 19%, 7% 0);
 }
 /*# sourceMappingURL=style2.css.map */

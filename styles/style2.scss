@@ -17,7 +17,9 @@ $break-small: 640px;
     box-sizing: border-box;
     font-family: 'Roboto',sans-serif;
 }
-
+html {
+    width: 100%;
+}
 .cover {
     width: 100%;
     text-align: center;
@@ -39,7 +41,7 @@ $break-small: 640px;
 //soclial links
 .social-links {
     position: fixed;
-    padding: 20px;
+    padding: 15px;
     z-index: 10;
     width: 80px;
     left: calc(100% - 80px);
@@ -49,6 +51,9 @@ $break-small: 640px;
     border-bottom-left-radius: 6px;
     -webkit-clip-path: polygon(29% 3%, 100% 0, 100% 100%, 52% 100%, 30% 96%, 9% 74%, 2% 17%);
     clip-path: polygon(29% 3%, 100% 0, 100% 100%, 52% 100%, 30% 96%, 9% 74%, 2% 17%);
+    @media screen and (max-width: $break-medium) {
+        display:none;
+    }
 }
 .nav-icon {
     display: block;
@@ -59,12 +64,19 @@ $break-small: 640px;
 }
 
 #splash {
-    background-color: #000000;
+    background-color: #0f0d16;
     padding: 15vh 15vw;
     height: 100vh;
     -webkit-clip-path: polygon(100% 0, 100% 84%, 85% 96%, 54% 95%, 50% 98%, 45% 94%, 7% 91%, 0 100%, 0 0);
     clip-path: polygon(100% 0, 100% 84%, 85% 96%, 54% 95%, 50% 98%, 45% 94%, 7% 91%, 0 100%, 0 0);
-
+    @media screen and (max-width: $break-small) {
+        -webkit-clip-path: polygon(100% 0, 100% 85%, 95% 90%, 50% 95%, 10% 90%, 0 100%, 0 0);
+        clip-path: polygon(100% 0, 100% 85%, 95% 90%, 50% 95%, 10% 90%, 0 100%, 0 0);
+        background-image: url("../images/parallax/mobileSplash.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
     h1 {
         text-align: left;
         font-size: 7vw;
@@ -89,7 +101,27 @@ $break-small: 640px;
         clip-path: polygon(95% 3%, 100% 64%, 90% 100%, 5% 91%, 0 19%, 7% 0);
         @media screen and (max-width: $break-small) {
             font-size: 5vw;
+            
         }
+    }
+}
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @media screen and (max-width: $break-small) {
+        display: none;
+    }
+}
+.parallax-foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    @media screen and (max-width: $break-small) {
+        display: none;
     }
 }
 .hover-letter {
@@ -100,12 +132,24 @@ $break-small: 640px;
 }
 
 #about {
+    text-align:center;
+}
+#portrait {
+    width: 100%;
+    margin-top: -60px;
+    @media screen and (max-width: $break-small) {
+        margin-top: 0;
+        margin-left: 1rem;
+        height: auto;
+        width: 100%;
+    }
 }
 .split {
     display: inline-block;
     padding: 20px;
     width: 50%;
     vertical-align: top;
+    text-align: left;
     font-size: 0;
     h1 {
         font-size: 4vh;
@@ -145,20 +189,113 @@ $break-small: 640px;
     color: $fc-dark;
 }
 
+#shaker-hero {
+    width: 100%;
+    font-size: 0;
+}
 #scrumptious-hero {
+    width: 100%;
+    font-size: 0;
+}
+#chappy-hero {
     width: 100%;
     font-size: 0;
 }
 
 .project-header {
     padding: 10px;
+    font-family: 'Oswald',sans-serif;
     background-color: black;
+    white-space: nowrap;
 }
 .project-title {
     margin-left: 11%;
     color: white;
-    font-size: 80px;
+    // font-size: 80px;
+    font-size: 5rem;
+    @media screen and (max-width: $break-medium) {
+        font-size: 3rem;
+    }
+    @media screen and (max-width: $break-small) {
+        font-size: 2rem;
+    }
 }
+.project-details {
+    height: 80px;
+    background-color: black;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 66% 80%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 66% 80%, 0 100%, 0 0);
+}
+.contain {
+    padding-left: 20px;
+    width: 1080px;
+    h1 {
+        font-size: 2rem;
+        line-height: 80px;
+        color: $fc-light;
+    }
+    @media screen and (max-width: $break-medium) {
+        display: block;
+        width: 100%;
+    }
+    @media screen and (max-width: $break-small) {
+        display: block;
+        width: 100%;
+    }
+}
+
+.flex-container {
+    display:flex;
+    width: 1080px;
+    flex-direction: row;
+    align-items: stretch;
+    @media screen and (max-width: $break-medium) {
+        width: 100%;
+    }
+    @media screen and (max-width: $break-small) {
+        display: block;
+        width: 100%;
+    }
+}
+.flex-split {
+    flex: 1;
+    padding: 20px;
+    p {
+        margin: 0.75rem auto;
+        line-height: 1.25rem;
+    }
+}
+.flex-tech-container {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    justify-content: left;
+    flex-flow: wrap;
+}
+
+.flex-tech-icon {
+    display: inline-block;
+    margin: 10px;
+    font-size: 0;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 6px;
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+    }
+    @media screen and (max-width: $break-medium) {
+        width: 70px;
+        height: 70px;
+    }
+    @media screen and (max-width: $break-small) {
+        width: 60px;
+        height: 60px;
+    }
+}
+
 .footer {
     // margin-top: -6vh;
     padding-top: 40px;
@@ -170,6 +307,61 @@ $break-small: 640px;
     font-size: 0;
     -webkit-clip-path: polygon(60% 0, 95% 5%, 100% 20%, 100% 100%, 0 100%, 0 0, 15% 9%);
     clip-path: polygon(60% 0, 95% 5%, 100% 20%, 100% 100%, 0 100%, 0 0, 15% 9%);
-    // -webkit-clip-path: polygon(42.5% 15%, 57.5% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
-    // clip-path: polygon(42.5% 15%, 57.5% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
+    ul {
+        list-style: none;
+    }
+    ul li {
+        margin: 10px auto;
+        padding: 10px 2px;
+    }
+    a {
+        opacity: 0;
+        font-size: 0;
+        color: $fc-light;
+        text-decoration: none;
+        
+    }
+    a:hover {
+        color: $fc-warm;
+    }
+}
+#copywrite {
+    margin-left: 20px;
+    font-size: 1rem;
+    color: #444;
+}
+#contact-form {
+    p {
+        margin: 5px auto;
+    }
+    input[type=text] {
+        padding: 10px;
+        width: 80%;
+        // border: none;
+        // border-radius: 10px;
+        -webkit-clip-path: polygon(100% 0, 100% 90%, 85% 100%, 0 100%, 0 0);
+        clip-path: polygon(100% 0, 100% 90%, 85% 100%, 0 100%, 0 0);
+    }
+    textarea {
+        padding: 10px;
+        width: 80%;
+        height: 120px;
+        // border: none;
+        // border-radius: 10px;
+        -webkit-clip-path: polygon(100% 0, 100% 90%, 85% 100%, 0 100%, 0 0);
+        clip-path: polygon(100% 0, 100% 90%, 85% 100%, 0 100%, 0 0);
+    }
+    input[type=submit] {
+        cursor: pointer;
+        margin: 15px auto;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: $fc-warm;
+        color: black;
+        font-size: 1.5rem;
+        font-weight: 600;
+        -webkit-clip-path: polygon(95% 3%, 100% 64%, 90% 100%, 2% 91%, 0 19%, 7% 0);
+        clip-path: polygon(95% 3%, 100% 64%, 90% 100%, 2% 91%, 0 19%, 7% 0);
+    }
 }
