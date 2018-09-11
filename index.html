@@ -396,47 +396,46 @@
             
             function animateParallax() {
                 var top = $(window).scrollTop();
-                console.log(top);
                 anime.remove(layers[0]);
                 anime({
                     targets: layers[0],
                     translateY: -top * layerScrollModifier[0],
-                    duration: 100,
+                    duration: 0,
                     easing: "linear"
                 })
                 anime.remove(layers[1]);
                 anime({
                     targets: layers[1],
                     translateY: -top * layerScrollModifier[1],
-                    duration: 100,
+                    duration: 0,
                     easing: "linear"
                 })
                 anime.remove(layers[2]);
                 anime({
                     targets: layers[2],
                     translateY: -top * layerScrollModifier[2],
-                    duration: 100,
+                    duration: 0,
                     easing: "linear"
                 })
                 anime.remove(layers[3]);
                 anime({
                     targets: layers[3],
                     translateY: -top * layerScrollModifier[3],
-                    duration: 100,
+                    duration: 0,
                     easing: "linear"
                 })
                 anime.remove(layers[4]);
                 anime({
                     targets: layers[4],
                     translateY: -top * layerScrollModifier[4],
-                    duration: 100,
+                    duration: 0,
                     easing: "linear"
                 })
                 anime.remove(".parallax-foreground");
                 anime({
                     targets: ".parallax-foreground",
                     translateY: -top * layerScrollModifier[5],
-                    duration: 100,
+                    duration: 0,
                     easing: "linear"
                 })
             }
