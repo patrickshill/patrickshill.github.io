@@ -6,6 +6,9 @@ $fc-dark: #222;
 $fc-warm: #ffc400;
 $fc-secondary: #00ffff;
 
+//BG colors
+$bg-dark: #1b1922;
+
 //Break Points
 $break-medium: 1080px;
 $break-small: 640px;
@@ -126,9 +129,11 @@ html {
 }
 .hover-letter {
     cursor: zoom-in;
+    opacity: 1;
 }
 .hover-word {
     display:inline;
+    opacity: 1;
 }
 
 #about {
@@ -272,10 +277,14 @@ html {
     align-items: stretch;
     justify-content: left;
     flex-flow: wrap;
+    @media screen and (max-width: $break-small) {
+        justify-content: center;
+    }
 }
 
 .flex-tech-icon {
     display: inline-block;
+    opacity: 0;
     margin: 10px;
     font-size: 0;
     width: 80px;
@@ -308,6 +317,10 @@ html {
     font-size: 0;
     -webkit-clip-path: polygon(60% 0, 95% 5%, 100% 20%, 100% 100%, 0 100%, 0 0, 15% 9%);
     clip-path: polygon(60% 0, 95% 5%, 100% 20%, 100% 100%, 0 100%, 0 0, 15% 9%);
+    @media screen and (max-width: $break-small) {
+        -webkit-clip-path: polygon(60% 0, 95% 5%, 100% 10%, 100% 100%, 0 100%, 0 0, 15% 5%);
+        clip-path: polygon(60% 0, 95% 5%, 100% 10%, 100% 100%, 0 100%, 0 0, 15% 5%);
+    }
     ul {
         list-style: none;
     }
@@ -364,5 +377,121 @@ html {
         font-weight: 600;
         -webkit-clip-path: polygon(95% 3%, 100% 64%, 90% 100%, 2% 91%, 0 19%, 7% 0);
         clip-path: polygon(95% 3%, 100% 64%, 90% 100%, 2% 91%, 0 19%, 7% 0);
+    }
+}
+
+.gallery-container {
+    margin: 20px auto;
+    width: 1080px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    @media screen and (max-width: $break-medium) {
+        width: 100%;
+    }
+    @media screen and (max-width: $break-small) {
+        width: 100%;
+    }
+}
+.gallery {
+    width: 100%;
+}
+.gallery-prev {
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    margin-left: 15px;
+    margin-top: calc(304px - 20px);
+    width: 30px;
+    height: 40px;
+    background-color: $fc-warm;
+    -webkit-clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+    opacity: 0;
+}
+.gallery-next {
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    margin-left: calc(100% - 55px);
+    margin-top: calc(304px - 20px);
+    width: 30px;
+    height: 40px;
+    background-color: $fc-warm;
+    -webkit-clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    opacity: 0;
+}
+.gallery-images {
+    list-style: none;
+    white-space: nowrap;
+}
+.gallery-image {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+.gallery-image img {
+    display: inline-block;
+    width: 100%;
+}
+
+//Games
+.games-container {
+    width: 1080px;
+    @media screen and (max-width: $break-medium) {
+        width: 100%;
+    }
+    @media screen and (max-width: $break-small) {
+        width: 100%;
+    }
+}
+.project-container {
+    display: flex;
+    margin: 20px auto;
+    width: 100%;
+    @media screen and (max-width: $break-small) {
+        display: block;
+    }
+}
+.project-card {
+    margin: 40px auto;
+    width: 320px;
+    height: 320px;
+    transition: margin-top 0.25s;
+    margin-top: 10px;
+    background-color: $fc-light;
+    color: $fc-dark;
+    box-shadow: 0px 0px 10px black;
+    overflow: hidden;
+    h2 {
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+    }
+    img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 320px;
+        transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
+    }
+    img:hover {
+        top: -2.5%;
+        left: -2.5%;
+        width: 105%;
+        height: 105%;
+        transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
+    }
+    p {
+        padding: 10px;
+    }
+    @media screen and (max-width: $break-small) {
+        display: block;
+        width: 100%;
+    }
+}
+#games {
+    .project-card h2 {
+        background-color: $bg-dark;
+        color: $fc-light;
     }
 }
